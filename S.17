@@ -1,0 +1,15 @@
+-- SQL request(s)​​​​​​‌‌​​‌‌‌‌‌‌​‌​​‌​​‌‌‌‌‌‌​‌ below
+SELECT 
+t.NAME AS "Track Name",
+t.COMPOSER,
+t.UNITPRICE AS "PRICE",
+
+CASE
+ WHEN t.UNITPRICE < 1  THEN 'Budget'
+ WHEN t.UNITPRICE between 1.00 and 1.49 then 'Regular'
+ WHEN t.UNITPRICE between 1.50 and 1.99 then 'Premium'
+ ELSE 'Exclusive'
+END AS "PRICECATEGORY"
+
+
+FROM TRACK AS t;
