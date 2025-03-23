@@ -1,0 +1,41 @@
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+
+FROM
+Invoice
+
+WHERE
+BillingCity like 'b%'
+
+ORDER BY
+InvoiceDate;
+
+/* when we remember only a part of the search element we will use the like operator.
+% - i dont care what comes before/after the word ( known as wild card character).
+we use the "like" operator for by % .
+ the above example prints out all the billing cities starts with "b".
+*/
+
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+
+FROM
+Invoice
+
+WHERE
+BillingCity like '%b%'
+
+ORDER BY
+InvoiceDate;
+
+/* the above example prints out all the billing cities which has a letter b anywhere in the word. */
