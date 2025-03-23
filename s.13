@@ -1,0 +1,20 @@
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+
+FROM
+Invoice
+
+WHERE
+date(InvoiceDate)>'2009-01-03' AND total < 3.00
+
+ORDER BY
+InvoiceDate;
+
+/* we can also give multiplt constraints in the where clause by using the 'and' and 'or' operator .
+here we have used and and we retrive the records after the '2009-01-03' and whose total is greater than '3.00'.
+*/
