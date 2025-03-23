@@ -1,0 +1,18 @@
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+
+FROM
+Invoice
+
+WHERE
+BillingCity like 'b%' or BillingCity like 'p%'
+
+ORDER BY
+InvoiceDate;
+
+/* here we retrieve the records of the billingCity whose first letter is "b" or "p". */
