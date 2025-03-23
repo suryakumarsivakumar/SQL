@@ -1,0 +1,38 @@
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+
+FROM
+Invoice
+
+WHERE
+InvoiceDate = '2009-01-03 00:00:00'
+
+ORDER BY
+InvoiceDate;
+
+-- this is how we retrieve data for a particular date.
+-- we can also use a function where we dont need to specify time. that is "date
+
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+
+FROM
+Invoice
+
+WHERE
+date(InvoiceDate)='2009-01-03'
+
+ORDER BY
+InvoiceDate;
+
+-- here we retrieve contends using date() without specifying time.
