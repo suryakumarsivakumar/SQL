@@ -1,0 +1,20 @@
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+
+FROM
+Invoice
+
+WHERE
+total BETWEEN 1.98 AND 5.00
+
+ORDER BY
+InvoiceDate;
+
+/* the "BETWEEN XXX AND XXX " is the logical opertor to specify the things in between two values.
+for eg.,
+here we hava takes all the contents of the invoice table whose total value is between 1.98 and 5.00. */
