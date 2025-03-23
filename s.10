@@ -1,0 +1,37 @@
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+
+FROM
+Invoice
+
+WHERE
+BillingCity = 'Brussels'
+
+ORDER BY
+InvoiceDate;
+
+-- if we want to filter the data in the table which is of string datatype we will use the 'xxxxx'.
+
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+
+FROM
+Invoice
+
+WHERE
+BillingCity in ('Brussels','Edmonton','Bordeaux')
+
+ORDER BY
+InvoiceDate;
+
+-- if we want to filter the date in the table with multiple strings we can use the in keyword followed by parenthesis.
