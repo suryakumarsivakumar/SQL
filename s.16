@@ -1,0 +1,33 @@
+SELECT
+InvoiceId,
+CustomerId,
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total,
+CASE
+ WHEN total<2.00 THEN 'baseline purchase'
+ WHEN total BETWEEN 2.00 AND 6.99 THEN 'low purchase'
+ WHEN total BETWEEN 7.00 AND 15.00 THEN 'target purchase'
+ ELSE 'top performer'
+END as 'PurchaseType'
+
+FROM
+Invoice
+
+WHERE
+ Purchasetype = 'top performer'
+
+ORDER BY
+InvoiceDate;
+
+/* description:  they want as many customer as possible to spend between 7.00 and 15.00
+
+sales categories:
+baseline purchase - between 0  and 1.99
+low purchase - between 2.00 and 6.99
+targer purchase - between 7 and 15.00
+top performer - above 15.00
+
+here we used to case operator and we need to use then keyword to specify the cases and in the end to name column we need to end as keyword.
+*/
