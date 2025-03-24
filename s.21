@@ -1,0 +1,14 @@
+-- SQL request(s)​​​​​​‌‌​​‌‌‌‌‌‌‌‌​‌​‌​‌‌​‌‌​‌​ below
+SELECT 
+c.FIRSTNAME AS CUSTOMERfIRSTNAME,
+c.LASTNAME AS CUSTOMERLASTNAME,
+e.FIRSTNAME AS SUPPORTREPFIRSTNAME,
+e.LASTNAME AS SUPPORTREPLASTNAME
+FROM
+Customer AS c
+INNER JOIN 
+employee AS e
+on
+c.SUPPORTREPID = e.EMPLOYEEID
+
+/* here we have combined customer and employee table and printed the columns from each table. */
