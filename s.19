@@ -1,0 +1,14 @@
+SELECT 
+c.LastName,
+c.FirstName,
+i.InvoiceId,
+i.CustomerId,
+i.total
+FROM
+Invoice AS i
+INNER JOIN
+Customer AS c
+ON
+i.CustomerId = c.CustomerId;
+
+/* here we using alias for the tables and we accessing the records from the columns in the table */
