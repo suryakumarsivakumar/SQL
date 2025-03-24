@@ -1,0 +1,10 @@
+SELECT *
+FROM
+Invoice
+INNER JOIN
+Customer
+ON
+Invoice.CustomerId = Customer.CustomerId;
+
+--here we have used the inner join and we have joined two tables and retrive all the records from invoice table with the customer table.
+--we have also used ON keyword which is used to specify which is the foreign key between both the tables.
