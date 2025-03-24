@@ -1,0 +1,27 @@
+SELECT 
+e.FirstName,
+e.LastName,
+e.EmployeeId,
+c.FirstName,
+c.LastName,
+c.CustomerId,
+c.SupportRepId,
+i.total
+
+FROM
+Invoice AS i
+INNER JOIN
+Customer AS c
+ON
+i.CustomerId = c.CustomerId
+INNER JOIN
+Employee AS e
+ON
+c.SupportRepId = e.EmployeeId
+ORDER BY
+i.total DESC
+LIMIT 10;
+
+/* here we combine three tables such as customer invoice and employee tables using inner join.
+here we have listed the top 10 employees with highest individual sales.
+*/
