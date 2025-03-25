@@ -1,0 +1,14 @@
+-- aggregate function:  it turns a range of numbers into a single point of data.
+
+SELECT
+sum(total) AS [total sales],
+avg(total) AS [avg sales],
+max(total) AS [max sales],
+min(total) AS [min sales],
+count(*) AS [no of records]
+
+FROM
+Invoice
+
+/* the sum() add all the revenue in the total column similarly avg,max,min works.
+the count() counts the number of entities. */
