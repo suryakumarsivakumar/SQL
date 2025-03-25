@@ -1,0 +1,16 @@
+SELECT
+FirstName,
+LastName,
+Address,
+FirstName || ' ' || LastName || ' ' || Address || ' ' || City || ' ' || State || ' ' || Country || ' ' || PostalCode AS [mailing address],
+length(PostalCode),
+substr(postalcode,1,5)
+FROM
+Customer
+
+WHERE
+Country = "USA";
+
+/* here we have used the length() which gives the length of the string.
+we also used the substr(columnname,1,n) is used to retrieve a substring from a string.
+*/
