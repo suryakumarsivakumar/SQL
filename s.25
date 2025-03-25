@@ -1,0 +1,12 @@
+SELECT
+LastName,
+FirstName,
+BirthDate,
+strftime("%Y-%m-%d",Birthdate) as [BirthDate no time],
+strftime("%Y-%m-%d",'now') - strftime("%Y-%m-%d",Birthdate) AS age
+
+FROM
+Employee
+
+/* here we have used strfttime(format,string,modifier,modifier,..) where we first give the format that it needs to modify and then we can call the date column into it, while giving format for year - %Y, month - %m,date - %d.
+Then we can also minus or add using this function and here we minus it from the current date in the system and give the age of the employees. */
