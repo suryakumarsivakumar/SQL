@@ -1,0 +1,14 @@
+--nested function: a function contained within the another function.
+
+SELECT
+sum(total) AS [total sales],
+round(avg(total),2) AS [avg sales],
+max(total) AS [max sales],
+min(total) AS [min sales],
+count(total) AS [no of sales],
+count(*) AS [no of records]
+
+FROM
+Invoice
+
+-- here we have used the round(float value, no of decimal places) and we have placed the avg() inside it.
