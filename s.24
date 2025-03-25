@@ -1,0 +1,16 @@
+SELECT
+FirstName,
+LastName,
+Address,
+FirstName || ' ' || LastName || ' ' || Address || ' ' || City || ' ' || State || ' ' || Country || ' ' || PostalCode AS [mailing address],
+upper(firstname) AS [FirstName ALL upper],
+lower(lastname) AS [LastName ALL upper]
+FROM
+Customer
+
+WHERE
+Country = "USA";
+
+/* here we have used the upper() which converts all the strings to upper case.
+we also have the lower() which converts all the strings to the lower case.
+*/
