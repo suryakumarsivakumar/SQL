@@ -1,0 +1,15 @@
+SELECT
+FirstName,
+LastName,
+Address,
+FirstName || ' ' || LastName || ' ' || Address || ' ' || City || ' ' || State || ' ' || Country AS [mailing address]
+
+FROM
+Customer
+
+WHERE
+Country = "USA";
+
+/* here we have used the concatenation opertor "||" which is used to add the records of the two columns 
+To leave a space inbetween two records of two columns we have used a space with a single colon.
+*/
