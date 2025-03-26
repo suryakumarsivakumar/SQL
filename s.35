@@ -1,0 +1,21 @@
+desc: how is the each individual city performing against the global average sales.
+
+SELECT
+BillingCity,
+avg(total) as [city avg],
+(
+SELECT
+avg(total)
+FROM
+Invoice) AS [world avg]
+
+FROM
+Invoice
+
+GROUP BY
+BillingCity
+
+ORDER by
+BillingCity;
+
+/* here we have used the subquery inside the select statement which is going the print the the smae avg of global sales for each city in the invoice table. */
