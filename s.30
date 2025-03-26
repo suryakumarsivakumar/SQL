@@ -1,0 +1,20 @@
+desc: billing city with average total greated than 6?
+
+SELECT
+ BillingCity,
+ round(avg(total),2) AS [avg sale per city]
+ 
+ FROM
+ Invoice
+ 
+ GROUP BY
+ BillingCity
+ 
+ HAVING
+ avg(total) >6.00
+ 
+ ORDER BY
+ BillingCity
+
+/* here we have used the having clause followed by the condition.
+the having clause is the used is we need to give any condition to the aggreagate clause */
