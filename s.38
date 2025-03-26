@@ -1,0 +1,27 @@
+--desc: distinct nad subquires | which tracks are not selling?
+
+SELECT
+TrackId,
+Name,
+Composer
+
+FROM
+Track
+
+WHERE
+TrackId NOT IN
+
+(SELECT
+DISTINCT
+TrackId
+
+FROM
+InvoiceLine
+
+ORDER BY
+TrackId
+);
+
+/* here we have used the subquires in the where clause and taken trackid using distinct keyword which takes out the duplicated values in trackid field.
+then we have passed in the outer query and used not in keyword to retrieve all the tracks that are not selling. */
+
