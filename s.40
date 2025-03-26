@@ -1,0 +1,9 @@
+view :   An SQL query that is saved and can be executed repeatedly or referenced by other queries.
+
+CREATE VIEW V_avgtotal AS 
+SELECT
+avg(total)
+FROM
+Invoice
+
+/* here we have use create view followed by view_name and as keyword to create a view */
