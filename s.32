@@ -1,0 +1,17 @@
+desc:grouping one or more field at a time | what are the average income total by billing country and billingcity ?
+ 
+ SELECT
+ BillingCountry,
+ BillingCity,
+ round(avg(total),2) AS [avg sale per city]
+ 
+ FROM
+ Invoice
+ 
+ GROUP BY
+ BillingCountry,BillingCity
+
+ ORDER BY
+ BillingCountry
+
+ /* here we have used both the billingcity and billingcountry in the group by clause separated by a comma ',' . */
