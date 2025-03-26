@@ -1,0 +1,7 @@
+UPDATE
+Artist 
+set NAME ="damein marley"
+WHERE
+ArtistId =276
+
+--TO UPDATE A DATA IN THE TABLE
