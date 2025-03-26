@@ -1,0 +1,20 @@
+desc: returning multiple values from asubquery
+
+SELECT
+InvoiceDate,
+BillingAddress,
+BillingCity
+
+FROM
+Invoice
+
+WHERE
+InvoiceDate in
+(SELECT
+ InvoiceDate
+ FROM
+ Invoice
+ WHERE
+ InvoiceId in (231,232,234));
+
+ /* here we have used the subquery in the where clause and it returns three invoicedate and for that we are retriving records from the invoice table */
