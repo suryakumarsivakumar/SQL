@@ -1,0 +1,21 @@
+-- desc: sql query that identifies tracks that never have been sold.​​​​
+SELECT 
+t.trackid as "Track ID",
+t.name as "Track Name",
+t.composer,
+g.name AS "GENRE"
+
+FROM 
+track t
+
+inner join
+genre g
+ON
+t.genreid = g.genreid
+
+WHERE
+t.TRACKID not IN 
+(SELECT
+trackid
+FROM
+InvoiceLine);
