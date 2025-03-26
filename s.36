@@ -1,0 +1,21 @@
+// desc: subquires with non-aggregate functions
+
+SELECT
+InvoiceDate,
+BillingAddress,
+BillingCity
+
+FROM
+Invoice
+
+WHERE
+InvoiceDate>
+(SELECT
+ InvoiceDate
+ FROM
+ Invoice
+ WHERE
+ InvoiceId=234);
+
+/* here we have used the subquery in the where clause
+in the subquery we have taken a specific invoice date and printed all the reocords in the fields which are happened after that specific date. */
