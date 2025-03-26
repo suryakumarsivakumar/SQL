@@ -1,0 +1,12 @@
+-- SQL request(s)​​​​​​‌‌​‌​​​​​​‌​​​‌​‌‌‌‌​​‌‌​ below
+SELECT 
+billingcity AS CITY,
+round(avg(TOTAL),2) AS AVERAGESPENDING
+FROM 
+invoice
+GROUP BY
+BILLINGCITY
+ORDER BY
+BILLINGCITY
+
+/* here we have used the group by clause to order the city names with the average spending of the customers ,so that the organisation knows where the marketing teams should invest their time and money */
