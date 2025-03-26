@@ -1,0 +1,19 @@
+desc:what are the avg income totals by city for only the cities starting with the letter 'L' ?
+
+SELECT
+ BillingCity,
+ round(avg(total),2) AS [avg sale per city]
+ 
+ FROM
+ Invoice
+ 
+ WHERE
+ BillingCity like 'L%'
+ 
+ GROUP BY
+ BillingCity
+ 
+ ORDER BY
+ BillingCity
+
+ /*  here we have used the like operator to specify that only pop up the records whose billingcity starts with 'L'. */
