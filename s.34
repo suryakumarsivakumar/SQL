@@ -1,0 +1,24 @@
+NESTED QUERY : A query wrapped inside of another query.
+desc: to print the records related to the field in the invoice table where the total income is less than the average income .
+
+SELECT
+InvoiceDate,
+BillingAddress,
+BillingCity,
+total
+FROM
+Invoice
+
+WHERE
+total<(
+SELECT
+	avg(total)
+FROM
+	Invoice)
+
+
+ORDER by
+
+total desc;
+
+/* here in the where clause we have inserted a subquery using a parenthesis. */
