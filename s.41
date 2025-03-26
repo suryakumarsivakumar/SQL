@@ -1,0 +1,10 @@
+DML LANGUAGE: it is used to work on with the date on the table
+-insert
+-delete
+-update
+
+INSERT INTO
+Artist(Name)
+VALUES("bob marley")
+
+/* here we have inserted a artist into the artist table */
