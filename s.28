@@ -1,0 +1,17 @@
+desc: what is the average income totals by city?
+ 
+ SELECT
+ BillingCity,
+ round(avg(total),2) AS [avg sale per city]
+ 
+ FROM
+ Invoice
+ 
+ GROUP BY
+ BillingCity
+ 
+ ORDER BY
+ BillingCity
+
+ /* group by - it is what we use for non-aggregate column to group it with the aggregate column.
+ here we have used group by for the billingcity because it is the non-aggregate column and we have obtained the result of avg income total by city */
