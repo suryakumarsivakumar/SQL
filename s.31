@@ -1,0 +1,28 @@
+desc: what are the average income totals by city which are greater than 6 and the city first letter starts with "B" ?
+
+SELECT
+ BillingCity,
+ round(avg(total),2) AS [avg sale per city]
+ 
+ FROM
+ Invoice
+ 
+ WHERE
+ BillingCity like 'b%'
+ 
+ GROUP BY
+ BillingCity
+ 
+ HAVING
+ avg(total) >6.00
+ 
+ ORDER BY
+ BillingCity
+
+ /* here we have used both the where and having clause.
+ where - for non-aggregate column.
+ having - for aggregate column.
+*/
+ 
+
+ 
